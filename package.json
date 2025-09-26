@@ -3,10 +3,10 @@
 	"version": "0.1.0",
 	"description": "Minimalist Svelte 5 boilerplate template targeted for SPA",
 	"license": "MIT",
-	"author": "user (https://github.com/user)",
-	"homepage": "https://github.com/user/svelte5-spa-boilerplate",
+	"author": "dante-quest (https://github.com/dante-quest)",
+	"homepage": "https://github.com/dante-quest/svelte5-spa-boilerplate",
 	"bugs": {
-		"url": "https://github.com/user/project/svelte5-spa-boilerplate"
+		"url": "https://github.com/dante-quest/svelte5-spa-boilerplate/issues"
 	},
 
 	"private": true,
