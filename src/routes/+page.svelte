@@ -34,7 +34,7 @@
 <pre>
 	mkdir your_new_project
 	cd your_new_project
-	git clone https://github.com/dante-quest/svelte5-spa-boilerplate
+	git clone https://github.com/dante-quest/svelte5-spa-boilerplate.git
 	npm install
 </pre>
 
