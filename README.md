@@ -14,16 +14,27 @@ It's a boilerplate template like any other. Compared to the default Svelte 5 kit
 The following commands will create a local copy of this repo and make it ready for development:
 
 ```sh
-mkdir your_new_project
-cd your_new_project
+# clone repository into current directory
+# note: this only works if the directory is empty!
+git clone https://github.com/dante-quest/svelte5-spa-boilerplate.git .
+npm install
+
+# clone repository into target directory
+git clone https://github.com/dante-quest/svelte5-spa-boilerplate.git your_project_name
+cd your_project_name
+npm install
+
+# optionally, rename the default directory name:
 git clone https://github.com/dante-quest/svelte5-spa-boilerplate.git
+mv svelte5-spa-boilerplate your_project_name
+cd your_project_name
 npm install
 ```
 
 
 ### Further development
 
-The following commands will create a local copy of this repo and make it ready for development:
+The following commands are essential for the development phase:
 
 ```sh
 # start the dev server
@@ -39,6 +50,6 @@ npm run build
 
 ### Building the SPA
 
-Using the default command **npm run build** will create the SPA in the **./build** folder with **index.html** as the entry-point.
+The command **npm run build** will create the SPA in the **./build** folder with **index.html** as the entry-point.
 
-Optionally activate prerendering in **+layout.ts** and change the fallback from **index.html** to something else like **200.html** in **svelte.config.js** if you require increased performance through pre-rendered pages.
+You can optionally activate prerendering if you desire or require increased performance. You can do this by adding **export const prerender = true;** in **+layout.ts** and other **.ts** files. This step also requires you to change the fallback from **index.html** to something else like **200.html** in **svelte.config.js**.

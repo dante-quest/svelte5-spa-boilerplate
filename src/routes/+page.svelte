@@ -29,18 +29,29 @@
 
 <h3>Using this template</h3>
 <p>
-	The following commands will create a local copy of this repo and make it ready for development:
+	The following commands will create a local copy of this repository and make it ready for development:
 </p>
 <pre>
-	mkdir your_new_project
-	cd your_new_project
+	# clone repository into current directory
+	# note: this only works if the directory is empty!
+	git clone https://github.com/dante-quest/svelte5-spa-boilerplate.git .
+	npm install
+
+	# clone repository into target directory
+	git clone https://github.com/dante-quest/svelte5-spa-boilerplate.git your_project_name
+	cd your_project_name
+	npm install
+
+	# optionally, rename the default directory name:
 	git clone https://github.com/dante-quest/svelte5-spa-boilerplate.git
+	mv svelte5-spa-boilerplate your_project_name
+	cd your_project_name
 	npm install
 </pre>
 
 <h3>Further development</h3>
 <p>
-	The following commands will create a local copy of this repo and make it ready for development:
+	The following commands are essential for the development phase:
 </p>
 <pre>
 	# start the dev server
@@ -49,18 +60,19 @@
 	# start the dev server and open the project in your default browser
 	npm run dev -- --open
 
-	# build the project as a SPA
+	# build the project as an SPA
 	npm run build
 </pre>
 
 <h3>Building the SPA</h3>
 <p>
-	Using the default command <strong>npm run build</strong> will create the SPA in the <strong>
+	The command <strong>npm run build</strong> will create the SPA in the <strong>
 	./build	</strong> folder with <strong>index.html</strong> as the entry-point.
 </p>
 <p>
-	Optionally activate prerendering in <strong>+layout.ts</strong> and change the fallback from
-	<strong>index.html</strong> to something else like <strong>200.html</strong> in <strong>
-	svelte.config.js</strong> if you require increased performance through pre-rendered pages.
+	You can optionally activate prerendering if you desire or require increased
+	performance. You can do this by adding <strong>export const prerender = true;</strong>
+	in <strong>+layout.ts</strong> and other .svelte files. This step also requires
+	you to change the fallback from <strong>index.html</strong> to something else
+	like <strong>200.html</strong> in <strong>svelte.config.js</strong>.
 </p>
-
