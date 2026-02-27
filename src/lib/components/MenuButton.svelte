@@ -16,14 +16,20 @@
 	} = $props();
 
 	// Sets default divider padding or uses the user-set value
-	dividerPadding = !divider
-		? (!dividerPadding ? "5px" : dividerPadding)
-		: (!dividerPadding ? "10px" : dividerPadding)
-	;
+	$effect(() => {
+		dividerPadding = !divider
+			? (!dividerPadding ? "5px" : dividerPadding)
+			: (!dividerPadding ? "10px" : dividerPadding)
+		;
+	});
 
 	// Helper to style the button based on user-defined props values
-	const useCustomBtnColor = btnColor ? true : false;
-	const textColorStyle = textColor ? `color: ${textColor};` : "";
+	let useCustomBtnColor = $state(false);
+	let textColorStyle = $state("");
+	$effect(() => {
+		useCustomBtnColor = btnColor ? true : false;
+		textColorStyle = textColor ? `color: ${textColor};` : "";
+	});
 
 	/**
 	 * Moves to target page programmatically if navigateTo has been set
